@@ -20,6 +20,7 @@ import AdministratorDashboardCategory from "./components/AdministratorDashboardC
 import AdministratorDashboardFeature from "./components/AdministratorDashboardFeature/AdministratorDashboardFeature";
 import AdministratorDashboardArticle from "./components/AdministratorDashboardArticle/AdministratorDashboardArticle";
 import AdministratorDashboardPhoto from "./components/AdministratorDashboardPhoto/AdministratorDashboardPhoto";
+import ArticlePage from "./components/ArticlePage/ArticlePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
@@ -36,6 +37,7 @@ root.render(
                 <Route path="/administrator/dashboard/category/" component={AdministratorDashboardCategory} />
                 <Route path="/administrator/dashboard/article/" component={AdministratorDashboardArticle} />
                 <Route path="/administrator/dashboard/photo/:aId" component={AdministratorDashboardPhoto} />
+                <Route path="/article/:aId" component={ArticlePage} />
                 <Route
                     path="/administrator/dashboard/feature/:cId"
                     component={AdministratorDashboardFeature}
