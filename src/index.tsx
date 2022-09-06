@@ -17,6 +17,7 @@ import { UserRegistrationPage } from "./components/UserRegistrationPage/UserRegi
 import AdministratorLoginPage from "./components/AdministratorLoginPage/AdministratorLoginPage";
 import AdministratorDashboard from "./components/AdministratorDashboard/AdministratorDashboard";
 import AdministratorDashboardCategory from "./components/AdministratorDashboardCategory/AdministratorDashboardCategory";
+import AdministratorDashboardFeature from "./components/AdministratorDashboardFeature/AdministratorDashboardFeature";
 
 const menuItems = [
     new MainMenuItem("Home", "/"),
@@ -39,6 +40,10 @@ root.render(
                 <Route path="/administrator/login" component={AdministratorLoginPage} />
                 <Route exact path="/administrator/dashboard/" component={AdministratorDashboard} />
                 <Route path="/administrator/dashboard/category/" component={AdministratorDashboardCategory} />
+                <Route
+                    path="/administrator/dashboard/feature/:cId"
+                    component={AdministratorDashboardFeature}
+                />
             </Switch>
         </HashRouter>
     </React.StrictMode>
