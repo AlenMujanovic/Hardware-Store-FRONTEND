@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Card, Table, Button, Modal, Form, Alert } from "react-bootstrap";
-import { faListAlt, faPlus, faEdit, faListUl, faBackward } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faEdit, faListUl, faBackward } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Redirect, Link } from "react-router-dom";
 import api, { ApiResponse } from "../../api/api";

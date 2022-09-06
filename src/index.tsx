@@ -18,14 +18,8 @@ import AdministratorLoginPage from "./components/AdministratorLoginPage/Administ
 import AdministratorDashboard from "./components/AdministratorDashboard/AdministratorDashboard";
 import AdministratorDashboardCategory from "./components/AdministratorDashboardCategory/AdministratorDashboardCategory";
 import AdministratorDashboardFeature from "./components/AdministratorDashboardFeature/AdministratorDashboardFeature";
-
-const menuItems = [
-    new MainMenuItem("Home", "/"),
-    new MainMenuItem("Contact", "/contact/"),
-    new MainMenuItem("User Log in", "/user/login/"),
-    new MainMenuItem("Register", "/user/register/"),
-    new MainMenuItem("Administrator Log in", "/administrator/login/"),
-];
+import AdministratorDashboardArticle from "./components/AdministratorDashboardArticle/AdministratorDashboardArticle";
+import AdministratorDashboardPhoto from "./components/AdministratorDashboardPhoto/AdministratorDashboardPhoto";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
@@ -40,6 +34,8 @@ root.render(
                 <Route path="/administrator/login" component={AdministratorLoginPage} />
                 <Route exact path="/administrator/dashboard/" component={AdministratorDashboard} />
                 <Route path="/administrator/dashboard/category/" component={AdministratorDashboardCategory} />
+                <Route path="/administrator/dashboard/article/" component={AdministratorDashboardArticle} />
+                <Route path="/administrator/dashboard/photo/:aId" component={AdministratorDashboardPhoto} />
                 <Route
                     path="/administrator/dashboard/feature/:cId"
                     component={AdministratorDashboardFeature}
