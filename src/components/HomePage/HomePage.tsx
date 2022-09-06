@@ -25,11 +25,11 @@ class HomePage extends React.Component {
         };
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.getCategories();
     }
 
-    componentWillUpdate() {
+    componentDidUpdate() {
         this.getCategories();
     }
 

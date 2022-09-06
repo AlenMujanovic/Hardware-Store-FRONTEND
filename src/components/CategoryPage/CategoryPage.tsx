@@ -316,7 +316,7 @@ export default class CategoryPage extends React.Component<CategoryPageProperties
 
     private printFeatureFilterComponent(feature: { featureId: number; name: string; values: string[] }) {
         return (
-            <Form.Group>
+            <Form.Group key={"Feature Filter " + feature.featureId}>
                 <Form.Label>
                     <strong>{feature.name}</strong>
                 </Form.Label>
@@ -333,6 +333,7 @@ export default class CategoryPage extends React.Component<CategoryPageProperties
                 value={value}
                 data-feature-id={feature.featureId}
                 onChange={(event: any) => this.featureFilterChanged(event as any)}
+                key={"Feature Check Box " + feature.featureId + " with " + value}
             />
         );
     }
@@ -355,7 +356,7 @@ export default class CategoryPage extends React.Component<CategoryPageProperties
 
     private singleCategory(category: CategoryType) {
         return (
-            <Col lg="3" md="4" sm="6" xs="12">
+            <Col lg="3" md="4" sm="6" xs="12" key={"Category " + category.categoryId}>
                 <Card className="mb-3">
                     <Card.Body>
                         <Card.Title as="p">{category.name}</Card.Title>
@@ -380,7 +381,7 @@ export default class CategoryPage extends React.Component<CategoryPageProperties
     }
 
     private singleArticle(article: ArticleType) {
-        return <SingleArticlePreview article={article} />;
+        return <SingleArticlePreview article={article} key={"Article " + article.articleId} />;
     }
 
     componentDidMount() {
