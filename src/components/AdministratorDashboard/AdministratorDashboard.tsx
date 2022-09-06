@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Container, Row } from "react-bootstrap";
 import { faListAlt } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import api, { ApiResponse, getIdentity } from "../../api/api";
 import RoledMainMenu from "../RoledMainMenu/RoledMainMenu";
 
@@ -58,6 +58,17 @@ class AdministratorDashboard extends React.Component {
                         <Card.Title>
                             <FontAwesomeIcon icon={faListAlt} /> Administrator Dashboard
                         </Card.Title>
+                        <ul>
+                            <li>
+                                <Link to="/administrator/dashboard/category/">Categories</Link>
+                            </li>
+                            <li>
+                                <Link to="/administrator/dashboard/feature/">Features</Link>
+                            </li>
+                            <li>
+                                <Link to="/administrator/dashboard/article/">Articles</Link>
+                            </li>
+                        </ul>
                     </Card.Body>
                 </Card>
             </Container>

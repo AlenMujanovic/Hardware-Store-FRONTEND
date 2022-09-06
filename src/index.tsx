@@ -16,6 +16,7 @@ import CategoryPage from "./components/CategoryPage/CategoryPage";
 import { UserRegistrationPage } from "./components/UserRegistrationPage/UserRegistrationPage";
 import AdministratorLoginPage from "./components/AdministratorLoginPage/AdministratorLoginPage";
 import AdministratorDashboard from "./components/AdministratorDashboard/AdministratorDashboard";
+import AdministratorDashboardCategory from "./components/AdministratorDashboardCategory/AdministratorDashboardCategory";
 
 const menuItems = [
     new MainMenuItem("Home", "/"),
@@ -36,7 +37,8 @@ root.render(
                 <Route path="/user/register" component={UserRegistrationPage} />
                 <Route path="/category/:cId" component={CategoryPage} />
                 <Route path="/administrator/login" component={AdministratorLoginPage} />
-                <Route path="/administrator/dashboard" component={AdministratorDashboard} />
+                <Route exact path="/administrator/dashboard/" component={AdministratorDashboard} />
+                <Route path="/administrator/dashboard/category/" component={AdministratorDashboardCategory} />
             </Switch>
         </HashRouter>
     </React.StrictMode>
