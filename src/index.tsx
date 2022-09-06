@@ -28,15 +28,14 @@ const menuItems = [
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
     <React.StrictMode>
-        <MainMenu items={menuItems}></MainMenu>
         <HashRouter>
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/contact" component={ContactPage} />
                 <Route path="/user/login" component={UserLoginPage} />
-                <Route path="/administrator/login" component={AdministratorLoginPage} />
                 <Route path="/user/register" component={UserRegistrationPage} />
                 <Route path="/category/:cId" component={CategoryPage} />
+                <Route path="/administrator/login" component={AdministratorLoginPage} />
                 <Route path="/administrator/dashboard" component={AdministratorDashboard} />
             </Switch>
         </HashRouter>

@@ -8,6 +8,7 @@ import ArticleType from "../../types/ArticleType";
 import { Link, Redirect } from "react-router-dom";
 import { ApiConfig } from "../../config/api.config";
 import SingleArticlePreview from "../SingleArticlePreview/SingleArticlePreview";
+import RoledMainMenu from "../RoledMainMenu/RoledMainMenu";
 
 interface CategoryPageProperties {
     match: {
@@ -134,6 +135,7 @@ export default class CategoryPage extends React.Component<CategoryPageProperties
 
         return (
             <Container>
+                <RoledMainMenu role="user" />
                 <Card>
                     <Card.Body>
                         <Card.Title>
